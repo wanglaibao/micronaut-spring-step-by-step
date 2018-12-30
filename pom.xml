@@ -3,7 +3,10 @@
   <groupId>com.laibao</groupId>
   <artifactId>micronaut-spring-step-by-step</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <modules>
+        <module>micronaut-spring-app</module>
+    </modules>
+    <packaging>pom</packaging>
 
    <properties>
         <java.version>1.8</java.version>
@@ -30,17 +33,17 @@
         <url>https://github.com/wanglaibao/micronaut-spring-step-by-step</url>
     </scm>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.micronaut</groupId>
-                <artifactId>micronaut-bom</artifactId>
-                <version>${micronaut.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <!--<dependencyManagement>-->
+        <!--<dependencies>-->
+            <!--<dependency>-->
+                <!--<groupId>io.micronaut</groupId>-->
+                <!--<artifactId>micronaut-bom</artifactId>-->
+                <!--<version>${micronaut.version}</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+            <!--</dependency>-->
+        <!--</dependencies>-->
+    <!--</dependencyManagement>-->
 
     <dependencies>
         <dependency>

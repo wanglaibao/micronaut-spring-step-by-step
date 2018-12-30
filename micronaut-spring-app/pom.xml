@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>micronaut-spring-step-by-step</artifactId>
+        <groupId>com.laibao</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.laibao</groupId>
+    <artifactId>micronaut-spring-app</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.1.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.micronaut/micronaut-spring -->
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-spring</artifactId>
+            <version>${micronaut.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.micronaut.spring/micronaut-spring-context -->
+        <!--<dependency>-->
+            <!--<groupId>io.micronaut.spring</groupId>-->
+            <!--<artifactId>micronaut-spring-context</artifactId>-->
+            <!--<version>1.0.0.M1</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/io.micronaut.spring/micronaut-spring-annotation -->
+        <!--<dependency>-->
+            <!--<groupId>io.micronaut.spring</groupId>-->
+            <!--<artifactId>micronaut-spring-annotation</artifactId>-->
+            <!--<version>1.0.0.M1</version>-->
+        <!--</dependency>-->
+
+
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-http-server-netty</artifactId>
+            <version>${micronaut.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-inject-java</artifactId>
+            <version>${micronaut.version}</version>
+        </dependency>
+    </dependencies>
+</project>
