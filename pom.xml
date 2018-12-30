@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.laibao</groupId>
-  <artifactId>micronaut-in-action</artifactId>
+  <artifactId>micronaut-spring-step-by-step</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -11,6 +11,24 @@
         <junit.version>4.12</junit.version>
        <micronaut.version>1.0.2</micronaut.version>
    </properties>
+  
+    <developers>
+        <developer>
+            <id>wanglaibao</id>
+            <name>小宝在杭州</name>
+            <email>1131751437@qq.com</email>
+            <url>https://github.com/wanglaibao</url>
+            <roles>
+                <role>Coder</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:wanglaibao/micronaut-spring-step-by-step.git</connection>
+        <developerConnection>scm:git:git@github.com:wanglaibao/micronaut-spring-step-by-step.git</developerConnection>
+        <url>https://github.com/wanglaibao/micronaut-spring-step-by-step</url>
+    </scm>
 
     <dependencyManagement>
         <dependencies>
