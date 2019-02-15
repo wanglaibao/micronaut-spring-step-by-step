@@ -22,16 +22,32 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>io.micronaut</groupId>
+                <artifactId>micronaut-bom</artifactId>
+                <version>${micronaut.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
 
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<version>1.18.4</version>-->
+        <!--</dependency>-->
+
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-runtime</artifactId>
+            <scope>compile</scope>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.micronaut/micronaut-spring -->
         <dependency>
             <groupId>io.micronaut</groupId>
@@ -58,31 +74,111 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.micronaut.spring/micronaut-spring-context -->
-        <!--<dependency>-->
-            <!--<groupId>io.micronaut.spring</groupId>-->
-            <!--<artifactId>micronaut-spring-context</artifactId>-->
-            <!--<version>1.0.0.M1</version>-->
-        <!--</dependency>-->
-
-        <!-- https://mvnrepository.com/artifact/io.micronaut.spring/micronaut-spring-annotation -->
-        <!--<dependency>-->
-            <!--<groupId>io.micronaut.spring</groupId>-->
-            <!--<artifactId>micronaut-spring-annotation</artifactId>-->
-            <!--<version>1.0.0.M1</version>-->
-        <!--</dependency>-->
-
-
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-http-server-netty</artifactId>
             <version>${micronaut.version}</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-inject-java</artifactId>
             <version>${micronaut.version}</version>
+            <scope>provided</scope>
         </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.7.0</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>UTF-8</encoding>
+                        <compilerArgs>
+                            <arg>-parameters</arg>
+                        </compilerArgs>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>io.micronaut</groupId>
+                                <artifactId>micronaut-inject-java</artifactId>
+                                <version>${micronaut.version}</version>
+                            </path>
+                            <path>
+                                <groupId>io.micronaut</groupId>
+                                <artifactId>micronaut-validation</artifactId>
+                                <version>${micronaut.version}</version>
+                            </path>
+                            <path>
+                                <groupId>io.micronaut.configuration</groupId>
+                                <artifactId>micronaut-openapi</artifactId>
+                                <version>${micronaut.version}</version>
+                            </path>
+                            <path>
+                                <groupId>io.micronaut.spring</groupId>
+                                <artifactId>micronaut-spring-boot-annotation</artifactId>
+                                <version>${micronaut.sprint.version}</version>
+                            </path>
+                            <path>
+                                <groupId>io.micronaut.spring</groupId>
+                                <artifactId>micronaut-spring-web-annotation</artifactId>
+                                <version>${micronaut.sprint.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>test-compile</id>
+                            <goals>
+                                <goal>testCompile</goal>
+                            </goals>
+                            <configuration>
+                                <compilerArgs>
+                                    <arg>-parameters</arg>
+                                </compilerArgs>
+                                <annotationProcessorPaths>
+                                    <path>
+                                        <groupId>io.micronaut</groupId>
+                                        <artifactId>micronaut-inject-java</artifactId>
+                                        <version>${micronaut.version}</version>
+                                    </path>
+                                    <path>
+                                        <groupId>io.micronaut</groupId>
+                                        <artifactId>micronaut-validation</artifactId>
+                                        <version>${micronaut.version}</version>
+                                    </path>
+                                    <path>
+                                        <groupId>io.micronaut.spring</groupId>
+                                        <artifactId>micronaut-spring-boot-annotation</artifactId>
+                                        <version>${micronaut.sprint.version}</version>
+                                    </path>
+                                    <path>
+                                        <groupId>io.micronaut.spring</groupId>
+                                        <artifactId>micronaut-spring-web-annotation</artifactId>
+                                        <version>${micronaut.sprint.version}</version>
+                                    </path>
+                                </annotationProcessorPaths>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+
 </project>

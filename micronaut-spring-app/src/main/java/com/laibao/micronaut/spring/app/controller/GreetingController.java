@@ -21,8 +21,9 @@ public class GreetingController {
     }
 
     @GetMapping("/greeting")
-    public Greeting greeting() {
-        return new Greeting(1,"adfasfd");
+    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Greeting(1,name);
+        //return greetingService.greeting(name);
     }
 
 //    @GetMapping("/greeting")
