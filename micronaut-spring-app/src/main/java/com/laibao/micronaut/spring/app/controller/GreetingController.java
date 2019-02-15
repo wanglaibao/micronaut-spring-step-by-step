@@ -20,15 +20,15 @@ public class GreetingController {
         this.greetingService = greetingService;
     }
 
-    @GetMapping("/greeting")
-    public Greeting greeting(@RequestParam(value="name", required = false, defaultValue="World") String name) {
-        return new Greeting(1,name);
-    }
-
 //    @GetMapping("/greeting")
-//    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-//        return greetingService.greeting(name);
+//    public Greeting greeting(@RequestParam(value="name", required = false, defaultValue="World") String name) {
+//        return new Greeting(1,name);
 //    }
+
+    @GetMapping("/greeting")
+    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return greetingService.greeting(name);
+    }
 
     @PostMapping("/greeting")
     public Greeting greetingByPost(@RequestBody Greeting greeting) {

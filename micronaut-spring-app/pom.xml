@@ -58,7 +58,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <scope>compile</scope>
         </dependency>
 
         <dependency>
@@ -129,12 +128,17 @@
                             </path>
                             <path>
                                 <groupId>io.micronaut.spring</groupId>
-                                <artifactId>micronaut-spring-boot-annotation</artifactId>
+                                <artifactId>micronaut-spring-annotation</artifactId>
                                 <version>${micronaut.spring.version}</version>
                             </path>
                             <path>
                                 <groupId>io.micronaut.spring</groupId>
                                 <artifactId>micronaut-spring-web-annotation</artifactId>
+                                <version>${micronaut.spring.version}</version>
+                            </path>
+                            <path>
+                                <groupId>io.micronaut.spring</groupId>
+                                <artifactId>micronaut-spring-boot-annotation</artifactId>
                                 <version>${micronaut.spring.version}</version>
                             </path>
                         </annotationProcessorPaths>
@@ -162,12 +166,17 @@
                                     </path>
                                     <path>
                                         <groupId>io.micronaut.spring</groupId>
-                                        <artifactId>micronaut-spring-boot-annotation</artifactId>
+                                        <artifactId>micronaut-spring-annotation</artifactId>
                                         <version>${micronaut.spring.version}</version>
                                     </path>
                                     <path>
                                         <groupId>io.micronaut.spring</groupId>
                                         <artifactId>micronaut-spring-web-annotation</artifactId>
+                                        <version>${micronaut.spring.version}</version>
+                                    </path>
+                                    <path>
+                                        <groupId>io.micronaut.spring</groupId>
+                                        <artifactId>micronaut-spring-boot-annotation</artifactId>
                                         <version>${micronaut.spring.version}</version>
                                     </path>
                                 </annotationProcessorPaths>
