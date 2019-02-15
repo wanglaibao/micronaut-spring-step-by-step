@@ -21,9 +21,8 @@ public class GreetingController {
     }
 
     @GetMapping("/greeting")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+    public Greeting greeting(@RequestParam(value="name", required = false, defaultValue="World") String name) {
         return new Greeting(1,name);
-        //return greetingService.greeting(name);
     }
 
 //    @GetMapping("/greeting")
@@ -50,7 +49,7 @@ public class GreetingController {
         return greetingService.greeting(name);
     }
 
-    @GetMapping(path = "/", produces = "text/html")
+    @GetMapping(value = "/", produces = "text/html")
     public String home(Model model) {
         model.addAttribute("message", "Welcome to Micronaut for Spring");
         return "home";

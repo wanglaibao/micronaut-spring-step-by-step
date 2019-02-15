@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.12</junit.version>
        <micronaut.version>1.0.4</micronaut.version>
-       <micronaut.sprint.version>1.0.0.M3</micronaut.sprint.version>
+       <micronaut.spring.version>1.0.0.M3</micronaut.spring.version>
    </properties>
   
     <developers>
@@ -33,18 +33,6 @@
         <developerConnection>scm:git:git@github.com:wanglaibao/micronaut-spring-step-by-step.git</developerConnection>
         <url>https://github.com/wanglaibao/micronaut-spring-step-by-step</url>
     </scm>
-
-    <!--<dependencyManagement>-->
-        <!--<dependencies>-->
-            <!--<dependency>-->
-                <!--<groupId>io.micronaut</groupId>-->
-                <!--<artifactId>micronaut-bom</artifactId>-->
-                <!--<version>${micronaut.version}</version>-->
-                <!--<type>pom</type>-->
-                <!--<scope>import</scope>-->
-            <!--</dependency>-->
-        <!--</dependencies>-->
-    <!--</dependencyManagement>-->
 
     <dependencies>
         <dependency>

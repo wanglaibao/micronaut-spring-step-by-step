@@ -85,7 +85,7 @@
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-inject-java</artifactId>
             <version>${micronaut.version}</version>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>
@@ -130,12 +130,12 @@
                             <path>
                                 <groupId>io.micronaut.spring</groupId>
                                 <artifactId>micronaut-spring-boot-annotation</artifactId>
-                                <version>${micronaut.sprint.version}</version>
+                                <version>${micronaut.spring.version}</version>
                             </path>
                             <path>
                                 <groupId>io.micronaut.spring</groupId>
                                 <artifactId>micronaut-spring-web-annotation</artifactId>
-                                <version>${micronaut.sprint.version}</version>
+                                <version>${micronaut.spring.version}</version>
                             </path>
                         </annotationProcessorPaths>
                     </configuration>
@@ -163,12 +163,12 @@
                                     <path>
                                         <groupId>io.micronaut.spring</groupId>
                                         <artifactId>micronaut-spring-boot-annotation</artifactId>
-                                        <version>${micronaut.sprint.version}</version>
+                                        <version>${micronaut.spring.version}</version>
                                     </path>
                                     <path>
                                         <groupId>io.micronaut.spring</groupId>
                                         <artifactId>micronaut-spring-web-annotation</artifactId>
-                                        <version>${micronaut.sprint.version}</version>
+                                        <version>${micronaut.spring.version}</version>
                                     </path>
                                 </annotationProcessorPaths>
                             </configuration>
