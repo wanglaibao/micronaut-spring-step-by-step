@@ -3,3 +3,13 @@ micronaut:
     name: greeting-service
 greeting:
   template: "Hola, %s!"
+
+#spring:
+#  datasource:
+#    url:  jdbc:h2:file:~/h2/testdb
+#    username: sa
+#    password:
+#    driverClassName:  org.h2.Driver
+#  jpa:
+#    hibernate.ddl-auto: update
+#    show-sql: true
